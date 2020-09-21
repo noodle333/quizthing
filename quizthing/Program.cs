@@ -48,7 +48,19 @@ namespace quizthing
             {
                 Console.WriteLine("INCORRECT.");
             }
-            Console.WriteLine("YOU FINISHED THE QUIZ WITH " + points + " / 3 POINTS");
+            if (points == 0 || points == 1)
+            {
+                Console.WriteLine("BAD SCORE STUDY UP BRO. YOU FINISHED WITH " + points + " / 3 POINTS.");
+
+            }
+            else if (points == 2)
+            {
+                Console.WriteLine("ALMOST A PERFECT SCORE. YOU FINISHED WITH " + points + " / 3 POINTS.");
+            }
+            else
+            {
+                Console.WriteLine("A PERFECT SCORE! YOU FINISHED WITH " + points + " / 3 POINTS.");
+            }
             Console.ReadLine();
         }
     }
